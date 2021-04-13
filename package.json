@@ -1,0 +1,15 @@
+{
+  "name": "php-nouha",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "start": "node main.js",
+    "test": "dev"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "php-server": "^0.2.1"
+  }
+}
