@@ -1,0 +1,19 @@
+/* Global Classes*/
+
+html {
+    scroll-behavior: smooth;
+}
+
+button,
+button:focus {
+	outline: none !important;   
+    box-shadow: none !important;
+}
+
+
+/* Table strike*/
+table {
+    .strike{
+        text-decoration: line-through;
+    }
+}

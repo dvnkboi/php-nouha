@@ -1,11 +1,25 @@
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    test
-</body>
-</html>
+<?php
+
+require './database/DBController.php';
+
+// Include header template.
+require_once './header.php';
+
+// var_dump($db);
+// Include banner area template.
+include './Templates/banner-area.php';
+
+// Include Top-sale area template.
+include './Templates/top-sale-area.php';
+
+// Include Special Price area template.
+include './Templates/special-price-area.php';
+
+// Include banner-ads area template.
+include './Templates/banner-ads-area.php';
+
+// Include banner-ads area template.
+include './Templates/new-phones-area.php';
+
+// Include footer template.
+require_once './footer.php';
