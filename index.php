@@ -1,7 +1,5 @@
 <?php
 
-require './functions.php';
-
 // Include header template.
 require_once './header.php';
 

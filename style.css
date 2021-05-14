@@ -137,3 +137,14 @@ table .strike {
 }
 
 /*# sourceMappingURL=style.css.map */
+#banner-area .item{
+  max-height: 600px;
+}
+
+#top-sale .item .product{
+  height:250px;
+}
+
+#cartBtn, #cartBtn *{
+  cursor: pointer;
+}
