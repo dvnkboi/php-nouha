@@ -41,16 +41,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav m-auto font-rubik">
                         <li class="nav-item active">
-                            <a class="nav-link" href="#">On Sale <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Category</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Products <i class="fas fa-chevron-down"></i></a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Category <i class="fas fa-chevron-down"></i></a>
+                            <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
                         </li>
                     </ul>
                     <form class="font-size-14 font-raleway">

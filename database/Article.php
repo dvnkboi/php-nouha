@@ -26,5 +26,17 @@ class Article
         }
 
     }
+
+    public function getOne($id)
+    {
+        try{
+            $this->db->query("SELECT * FROM articles where id = " . $id);
+            return $this->db->results();
+        }catch(Throwable $e) {
+            echo '<div class="alert alert-danger">'.get_class($e).
+            ' on line: '.$e->getLine().' of '.$e->getFile().': '.$e->getMessage().'</div>';
+        }
+
+    }
 }
 

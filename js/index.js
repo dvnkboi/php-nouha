@@ -10,7 +10,7 @@ $(document).ready(function () {
 
   // Top Sale OWL Carousel
   $('#top-sale .owl-carousel').owlCarousel({
-    loop: true,
+    loop: false,
     nav: true,
     dots: false,
     responsive: {
@@ -59,6 +59,8 @@ $(document).ready(function () {
         return ++oldValue;
       });
     }
+
+    updatePricings($input);
   });
   // Decrease
   $qtyDown.click(function (e) {
@@ -73,17 +75,23 @@ $(document).ready(function () {
         return --oldValue;
       });
     }
+
+    updatePricings($input);
   });
 });
 
 (async () => {
   await getCartCount();
-  $('.addtocart').click(async function (e) {
-    console.log($(this).attr('id'));
-    await localforage.setItem($(this).attr('id'), true);
-    await getCartCount();
-  });
 })();
+
+$('.addtocart').click(async function (e) {
+  e.preventDefault();
+  e.stopPropagation();
+  console.log('bruh',$(this).attr('prodId'));
+  await localforage.setItem($(this).attr('prodId'), 1);
+  await getCartCount();
+});
+
 
 async function getCartCount() {
   const keys = await localforage.keys();
@@ -96,9 +104,59 @@ async function getCartCount() {
   $('.cartCount').html(cartCount);
 }
 
-$("#cartBtn").click(async () => {
+async function goToCart() {
   let keys = await localforage.keys();
-  keys = keys.filter(val => val != 'cartCount');
-  keys = keys.map(e => e.replace('ATC_',''));
-  window.location.href=`index.php?cartItems=${keys}`;
+  keys = keys.filter((val) => val != 'cartCount');
+  keys = keys.map((e) => e.replace('ATC_', ''));
+  window.location.href = `cart.php?cartItems=${keys}`;
+}
+
+$('#cartBtn').click(async (e) => {
+  e.preventDefault();
+  e.stopPropagation();
+
+  await goToCart();
+});
+
+$('.deleteCart').click(async function () {
+  let id = $(this).attr('id');
+  id = id.split('_')[1];
+  id = 'ATC_' + id;
+  await localforage.removeItem(id);
+
+  await goToCart();
+});
+
+function updateTotal() {
+  let sum = 0;
+  $('.product-price').each(function () {
+    sum += Number($(this).html().split(' ')[0]);
+  });
+  sum = sum + ' DH';
+
+  $('#deal-price').html(sum);
+}
+
+function updatePricings($input){
+
+  let id = $input.attr('data-id');
+  id = id.split('_')[1];
+  let price = $('body').find(`#CI_${id} .product-price`);
+
+  let priceVal = parseFloat(price.attr('op'));
+  let qtyVal = $input.val();
+
+  $(price).html(priceVal * qtyVal + ' DH');
+
+  updateTotal();
+}
+
+$(document).ready(function(){
+  updateTotal();
+});
+
+$('.displayItem').click(function() {
+  let id = $(this).attr('item');
+  id = id.split('_')[1];
+  window.location.href = `product.php?item=${id}`;
 });

@@ -1,44 +1,11 @@
 </main><!-- Main End -->
 
 <!-- Footer start -->
-<footer id="site-footer" class="bg-dark text-white py-5">
-    <div class="container">
-        <div class="row">
-            <div class="col-lg-3 col-12">
-                <h4 class="font-rubik font-size-16">Mobile Shop</h4>
-                <p class="font-size-14 font-raleway text-white-50"> Lorem ipsum dolor sit amet, consectetur adipisicing
-                    elit. Asperiores, repellat! Perferendis, aut. Odit a saepe quaerat earum sed, molestias minima
-                    deleniti tempora placeat provident nulla aliquam minus commodi? Dolore, voluptate! </p>
-            </div>
-            <div class="col-lg-4 col-12">
-                <h4 class="font-rubik font-size-16">Newsletter</h4>
-                <form class="form-row">
-                    <div class="col">
-                        <input type="email" class="form-control" placeholder="Email *">
-                    </div>
-                    <div class="col">
-                        <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
-                    </div>
-                </form>
-            </div>
-            <div class="col-lg-2 col-12">
-                <h4 class="font-rubik font-size-16">Information</h4>
-                <div class="d-flex flex-column flex-wrap">
-                    <a href="#" class="font-raleway font-size-12 text-white-50 pb-1">About Us</a>
-                    <a href="#" class="font-raleway font-size-12 text-white-50 pb-1">Delivery Information</a>
-                    <a href="#" class="font-raleway font-size-12 text-white-50 pb-1">Privacy Policy</a>
-                    <a href="#" class="font-raleway font-size-12 text-white-50 pb-1">Terms & Conditions</a>
-                </div>
-            </div>
-            <div class="col-lg-2 col-12">
-                <h4 class="font-rubik font-size-16">Account</h4>
-                <div class="d-flex flex-column flex-wrap">
-                    <a href="#" class="font-raleway font-size-12 text-white-50 pb-1">My Account</a>
-                    <a href="#" class="font-raleway font-size-12 text-white-50 pb-1">Order History</a>
-                    <a href="#" class="font-raleway font-size-12 text-white-50 pb-1">Newsletters</a>
-                </div>
-            </div>
-        </div>
+<footer id="site-footer" class="bg-dark text-white">
+
+    <div class="w-100 h-100 p-0 m-0 d-flex justify-content-center align-items-center flex-column">
+        <h4 class="font-rubik font-size-16 m-0 pt-2 pb-1">Mobile Shop</h4>
+        <p class="font-size-14 font-raleway text-white-50 m-0 pb-1"> copyright of MobileShop.inc 2021</p>
     </div>
 </footer>
 

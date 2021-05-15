@@ -3,8 +3,9 @@
 /* Fonts*/
 /* Colors*/
 /* Global Classes*/
-html {
+html, body {
   scroll-behavior: smooth;
+  min-height: 100vh;
 }
 
 button,
@@ -16,6 +17,11 @@ button:focus {
 /* Table strike*/
 table .strike {
   text-decoration: line-through;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
 }
 
 /* Typography classes*/
@@ -97,13 +103,13 @@ table .strike {
 }
 
 /* Top-Sale template */
-#top-sale .owl-carousel .item .product a {
+.product div {
   overflow: hidden;
 }
-#top-sale .owl-carousel .item .product img {
+.product img {
   transition: transform 0.5s ease;
 }
-#top-sale .owl-carousel .item .product img:hover {
+.product img:hover {
   transform: scale(1.1);
 }
 #top-sale .owl-carousel .owl-nav button {
@@ -138,11 +144,7 @@ table .strike {
 
 /*# sourceMappingURL=style.css.map */
 #banner-area .item{
-  max-height: 600px;
-}
-
-#top-sale .item .product{
-  height:250px;
+  max-height: 550px;
 }
 
 #cartBtn, #cartBtn *{
