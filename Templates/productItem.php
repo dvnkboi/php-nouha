@@ -21,7 +21,7 @@
                     <span><i class="far fa-star"></i></span>
                 </div>
                 <div class="price py-2">
-                    <span>$<?php echo htmlspecialchars($item['prix'], ENT_QUOTES, 'UTF-8'); ?></span>
+                    <span><?php echo htmlspecialchars($item['prix'], ENT_QUOTES, 'UTF-8'); ?> DH</span>
                 </div>
                 <button prodId="<?php echo htmlspecialchars( "ATC_" . $item['id'], ENT_QUOTES, 'UTF-8'); ?>"
                     class="btn btn-warning font-size-12 addtocart">Add To</button>
