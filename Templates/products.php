@@ -9,7 +9,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <img src=".<?php echo htmlspecialchars($product['image_path'] , ENT_QUOTES, 'UTF-8'); ?>.png" alt="product" class="img-fluid">
+                <img src=".<?php echo htmlspecialchars($product['image_path'] , ENT_QUOTES, 'UTF-8'); ?>.png" alt="product" class="img-fluid w-100">
                 <div class="form-row pt-4 font-size-16 font-baloo">
                     <div class="col">
                         <button type="submit" class="btn btn-danger form-control">Proceed to buy</button>

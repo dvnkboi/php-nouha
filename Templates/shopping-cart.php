@@ -19,7 +19,7 @@
                 <!-- Cart Item-->
                 <div id="<?php echo htmlspecialchars( 'CI_' . $item['id'], ENT_QUOTES, 'UTF-8'); ?>" class="row border-top py-3 mt-3 cartItem">
                     <div class="col-sm-2">
-                        <img src=".<?php echo htmlspecialchars($product['image_path'] , ENT_QUOTES, 'UTF-8'); ?>.png" alt="cart-item" class="img-fluid" style="height: 120px;">
+                        <img src=".<?php echo htmlspecialchars($item['image_path'] , ENT_QUOTES, 'UTF-8'); ?>.png" alt="cart-item" class="img-fluid w-100" style="height: 140px;object-fit:scale-down;">
                     </div>
                     <div class="col-sm-8">
                         <h2 class="font-baloo font-size-20">
@@ -54,7 +54,7 @@
                     <p class="font-size-12 font-raleway text-success py-3"><i class="fas fa-check"> Your order is
                             eligible for free delivery.</i></p>
                     <div class="border-top py-4">
-                        <h2 class="font-baloo font-size-20">Subtotal (2 items):&nbsp;<span class="text-danger"><span
+                        <h2 class="font-baloo font-size-20">Subtotal (<?php echo count($cartItems); ?> items):&nbsp;<span class="text-danger"><span
                                     class="text-danger" id="deal-price">0 DH</span></span></h2>
                         <button type="submit" class="btn btn-warning mt-3">Proceed to checkout</button>
                     </div>
